@@ -1,0 +1,52 @@
+<html ng-app ="App">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="app.js"></script>
+    <title>Task</title>
+</head>
+<body ng-controller="Ctrl">
+    <div class="panel panel-success">
+        <div class="panel-heading">Denis Yegorov</div>
+            <div class="panel-body">                 
+                <h2>TRANSLATION</h2>
+                <div>                    
+                    <div>
+                         <div class="panel panel-info">
+                            <div class="panel-heading">Dictionary</div>
+                            <div class="panel-body">Put the mouse cursor in the input field!</div>  
+                            <div>
+                                <input type="text" class="form-control" id="word" readonly  ng-keydown="$event.keyCode === 32 && viewTrans(currentValue)"
+                                       value="{{currentValue.word}}"> 
+                                <input type="text" class="form-control" id="trans" readonly ng-keydown="$event.keyCode === 32 && viewTrans(currentValue)"
+                                       value="{{currentValue.translation}}">
+                            </div>                            
+                            <label class="label label-success"> Current record: <b>{{index}}</b></label>                               
+                            <label class="label label-info"><b>Number of entries in the dictionary: </b> {{lenghtTrans}}</label> 
+                        </div>
+                    </div>
+                <br>
+                <div>			
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>WORD</th> 
+                                <th>TRANSLATION</th>  
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="info" ng-repeat="ts in listOfTrans">
+                                    <td>{{ts.word}}</td>       
+                                    <td>{{ts.translation}}</td>
+                            </tr>
+                        </tbody>                            
+                    </table>			
+                </div>                    
+        </div>       
+    </div>
+  </div>
+</body>
+</html>

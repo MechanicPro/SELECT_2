@@ -1,0 +1,15 @@
+{
+    "trans" :
+            [
+		{ "word": "apple", "translation": "яблоко"},
+		{ "word": "onomatopoeia", "translation": "звукоподражание"},
+		{ "word": "peach", "translation": "персик"},
+		{ "word": "nut", "translation": "орех"},
+                { "word": "pineapple", "translation": "ананас"}
+
+            ]
+}
+
+
+
+
